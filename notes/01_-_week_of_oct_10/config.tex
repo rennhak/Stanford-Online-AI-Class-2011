@@ -24,11 +24,13 @@
 \usepackage{graphicx}
 \usepackage{ae}
 \usepackage{newcent} %helvet
-%\usepackage{epsfig}
+\usepackage{epsfig}
 %\usepackage{rotating}
 \usepackage{pstricks}
 \usepackage{latexsym}
 \usepackage{amssymb}
+
+\usepackage{color}
 
 \usepackage{ifthen}
 \usepackage{wrapfig}
@@ -42,7 +44,6 @@
 
 \parindent0cm
 
-\usepackage{color}
 \usepackage{pslatex} % nice fonts
 
 % Meine Definitionen
@@ -57,6 +58,7 @@
 
 %\newcommand{\authors}[2]{ {\bf #1} \hspace*{1cm} {\tt #2}}
 \definecolor{LinkColor}{rgb}{0,0,0.5}
+\definecolor{lgray}{gray}{.75} 
 
 \usepackage{hyperref}
 \hypersetup{%
@@ -79,6 +81,20 @@
 \usepackage[official,right]{eurosym}
 
 
+\newcommand{\answer}[1]{Answer:\newline \rotatebox{180}{\reflectbox{\scalebox{1.0}{\textcolor{lgray}{#1}}}} }
+
+
+\newcommand{\pg}[0]               {\paragraph{}}
+\newcommand{\tbs}[0]              {\rule[-3mm]{0mm}{8mm}}
+
+%\renewcommand{\figurename}        {Fig.}
+%\renewcommand{\tablename}         {Tab.}
+
+%\newcommand{\acro}[2]{}
+%\newcommand{\ac}[1]{}
+%\newcommand{\acs}[1]{}
+%\newcommand{\acl}[1]{}
+
 %\evensidemargin=0pt
 %\oddsidemargin=0pt
 %\topmargin=-\headheight \advance\topmargin by -\headsep
@@ -88,6 +104,63 @@
 %\rightmargin=3cm
 %\oddsidemargin1cm
 %\evensidemargin1cm
+
+
+%%%%
+% Configuration of Packages
+%%%%%%%%
+
+\definecolor{ListingsColor}{rgb}{0.85,0.85,0.85}          % Grey
+\definecolor{LinkColor}{rgb}{0,0,0.5}                     % A nice blue
+% \definecolor{LinkColor}{rgb}{0,0,0}                     % Black
+
+%\hypersetup{%
+%    pdftitle          = \PaperTitle{},%
+%    pdfsubject        = \FileSubject{},%
+%    pdfkeywords       = \FileKeywords{},%
+%    pdfauthor         = \FileAuthor{},%
+%    pdfcreator        = {\LaTeX\ with package \flqq hyperref\frqq},%
+%    colorlinks        = true,%
+%    linkcolor         = LinkColor,%
+%    citecolor         = LinkColor,%
+%    filecolor         = LinkColor,%
+%    menucolor         = LinkColor,%
+%    pagecolor         = LinkColor,%
+%    urlcolor          = LinkColor,%
+%}
+%
+
+\lstloadlanguages{TeX}
+\lstset{language=[LaTeX]TeX,
+    numbers=left,
+    stepnumber=1,
+    numbersep=5pt,
+    numberstyle=\tiny,
+    breaklines=true,
+    breakautoindent=true,
+    postbreak=\space,
+    tabsize=2,
+    basicstyle=\ttfamily\footnotesize,
+    showspaces=false,
+    showstringspaces=false,
+    extendedchars=true,
+    backgroundcolor=\color{ListingsColor}}
+
+
+\graphicspath{{graphics/}}
+\DeclareGraphicsExtensions{.eps,.eps.gz,.png}
+\DeclareGraphicsRule{.eps}{.eps.gz}{}{`gunzip -c #1}
+
+% Why is some insane hack like this necessary?
+\newcommand{\newpageOrBurst}{%
+    \thispagestyle{empty}
+    \begin{minipage}{\textwidth}
+    \end{minipage}
+    \vfill \eject
+    % \pagebreak[4]
+    % \afterpage{\clearpage}
+}
+
 
 \textwidth14cm
 \pagestyle{headings}
