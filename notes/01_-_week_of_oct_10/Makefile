@@ -19,7 +19,7 @@
 #
 
 basename=config
-targetname=project
+targetname="01_-_Introduction_to_AI_-_Lecture_Notes_-_Week_of_October_10th"
 
 rm=`which rm`
 pdflatex=`which pdflatex`
