@@ -1,0 +1,108 @@
+% File: config.tex
+% (c) 11.04.2006, Bjoern Rennhak, <tex@rennhak.info>
+%
+% Config File
+%
+%
+
+
+%\documentclass[10pt,titlepage,final,oneside,dvips]{article}
+\documentclass[10pt, titlepage, final, dvips, a4paper, oneside, bibtotocnumbered, idxtotoc,halfparskip, chapterprefix, headsepline, footsepline]{scrartcl}
+
+\renewcommand{\baselinestretch}{1}
+\usepackage[latin1]{inputenc}
+\usepackage{a4}
+\usepackage[english]{babel}
+%\usepackage{german}
+%\usepackage{english}
+
+%\usepackage{CJK}
+%\usepackage[CJK,overlap]{ruby}
+
+%\renewcommand{\rubysep}{-0.2ex}
+
+\usepackage{graphicx}
+\usepackage{ae}
+\usepackage{newcent} %helvet
+%\usepackage{epsfig}
+%\usepackage{rotating}
+\usepackage{pstricks}
+\usepackage{latexsym}
+\usepackage{amssymb}
+
+\usepackage{ifthen}
+\usepackage{wrapfig}
+%\usepackage{picins}
+
+\usepackage{enumerate}
+
+\usepackage[savemem]{listings}
+
+%\usepackage{lettrine}
+
+\parindent0cm
+
+\usepackage{color}
+\usepackage{pslatex} % nice fonts
+
+% Meine Definitionen
+
+\def\FileAuthor{Bjoern Rennhak} 
+\def\FileTitle{Lecture Notes}
+\def\FileSubject{Lecture Notes}
+\def\FileKeywords{Note}
+
+%\def \Ra  {\Rightarrow}
+%\def \La  {\Leftarrow}
+
+%\newcommand{\authors}[2]{ {\bf #1} \hspace*{1cm} {\tt #2}}
+\definecolor{LinkColor}{rgb}{0,0,0.5}
+
+\usepackage{hyperref}
+\hypersetup{%
+    pdftitle      = \FileTitle{},%
+    pdfsubject    = \FileSubject{},%
+    pdfkeywords   = \FileKeywords{},%
+    pdfauthor     = \FileAuthor{},%
+    pdfcreator    = {\LaTeX\ with package \flqq hyperref\frqq},%
+    colorlinks=true,%
+    linkcolor=LinkColor,%
+    citecolor=LinkColor,%
+    filecolor=LinkColor,%
+    menucolor=LinkColor,%
+    pagecolor=LinkColor,%
+    urlcolor=LinkColor,%
+}
+
+
+
+\usepackage[official,right]{eurosym}
+
+
+%\evensidemargin=0pt
+%\oddsidemargin=0pt
+%\topmargin=-\headheight \advance\topmargin by -\headsep
+%\textwidth=15.99cm \textheight=24.62cm % normal A4, 1'' margin
+
+%\newcommand{\lowaktiv}[1]{$\overline{\mbox{#1}}$}
+%\rightmargin=3cm
+%\oddsidemargin1cm
+%\evensidemargin1cm
+
+\textwidth14cm
+\pagestyle{headings}
+% 1.0 Frontpage
+\include{frontpage}
+
+\begin{document}
+\maketitle
+
+\newpage
+
+% 2.0 Content
+\include{content}
+
+% 3.0 Appendix
+\end{document}
+
+% EOF

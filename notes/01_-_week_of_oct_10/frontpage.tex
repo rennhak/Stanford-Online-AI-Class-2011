@@ -1,0 +1,102 @@
+% File: frontpage.tex
+% (c) 06.06.2006, Björn Rennhak
+%
+%
+
+
+% ------------------- CHANGE BELOW HERE -------------------------------
+\newcommand{\myFillStyle}     {solid}
+\newcommand{\myFillColor}     {lightgray}
+\newcommand{\myCornerArc}     {0.5}
+
+\newcommand{\myTitle}         {Introduction to Artificial Intelligence}
+\newcommand{\mySubtitle}      {Lecture Notes}
+\newcommand{\myType}          {Lession I - Week of October $10^{th}$}
+\newcommand{\myTopic}         {Stanford Online Course, Fall 2011}
+
+\newcommand{\myName}          {Bjoern Rennhak}
+\newcommand{\myEmail}         {bjoern@rennhak.com}
+\newcommand{\myDepartment}    {Institute of Industrial Science}
+\newcommand{\myUniversity}    {The University of Tokyo}
+\newcommand{\myHomepage}      {http://www.rennhak.com}
+%\newcommand{\myProcessor}     {}
+\newcommand{\myProcessor}     {generated with \LaTeX2e}
+\newcommand{\myDate}          {$13^{th}$ October 2011}
+
+%\newboolean{sharpCorners}     \setboolean{sharpCorners}{false}
+%\renewcommand{\familydefault}{\sfdefault}
+ \newfont{\fa}{phvb8r at 17.28pt}
+ %\newfont{\fa}{cmssbx10 at 17.28pt}
+ \newfont{\fb}{cmss12 at 14.4pt}
+ \newfont{\fc}{cmss12 at 12pt}
+ \newfont{\fd}{cmss10 at 10pt}
+\newfont{\fe}{phvb8r at 25pt}
+
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\textwidth 16cm
+\textheight 24cm
+% ------------------- NO CHANGES BELOW HERE ---------------------------
+
+
+
+% Change defaults for sharpCorners if nessessary
+%\ifthenelse{\boolean{sharpCorners}}
+%    {
+%        \renewcommand{\myFillStyle}     {solid}
+%        \renewcommand{\myFillColor}     {lightgray}
+%        \renewcommand{\myCornerArc}     {0}
+%    }
+
+
+\catcode`\$=9
+\title{
+    %\vskip -1cm
+    \hrule
+    \vskip 2cm
+    \psframebox[fillstyle=\myFillStyle,fillcolor=\myFillColor,framearc=\myCornerArc]{
+        \parbox{\textwidth}{
+            \centering
+            \vspace*{1cm}
+            {\fe \myTitle}\\
+            {\fe \mySubtitle}\\[1cm]
+        }
+    }
+    \begin{minipage}[c]{\textwidth}
+        \centering
+        \vspace*{2cm}
+        {\Large \myType}\\
+        {\Large \underline{\myTopic}}\\
+    \end{minipage}
+    \vspace*{1cm}
+}
+\catcode`\$=3
+
+\author{
+    \begin{minipage}[c]{\textwidth}
+        \centering
+        \begin{minipage}[t]{3cm}
+            \includegraphics[width=2.5cm]{graphics/The_University_of_Tokyo_-_Emblem.eps}
+        \end{minipage}%
+        \begin{minipage}[c]{10cm}
+            \hrule
+            \vspace*{0.5cm}
+            \myName \hspace*{0.3cm}{\tt $<$\myEmail$>$}\\
+            \myDepartment\\
+            {\bf \myUniversity}
+            \vspace*{0.5cm}
+            \hrule
+            \vspace*{2.2cm}
+        \end{minipage}
+    \end{minipage}
+    %\vspace*{1cm}
+}
+\date{\myDate\\%
+{\small \myProcessor}%
+\vspace*{2cm}%
+\hrule%
+\centering
+\medskip
+{\fa w w w . r e n n h a k . c o m}
+}
+% *EOF*
