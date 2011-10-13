@@ -19,6 +19,7 @@
   An AI program is called...\\
 
   \begin{itemize}
+    \renewcommand{\labelitemi}{$\square$}
     \item Wetware
     \item Formula
     \item Intelligent Agent
@@ -26,13 +27,54 @@
 
   \answer{The last item is the right one}
 
+\subsection{Intelligent Agent}
+
+  We have an intelligent Agent, which interacts with the environment as seen in Figure
+  \ref{fig:Intelligent_Agent}. The Agent can perceive the state of the environment through its
+  sensors and it can effect its state through its actuators.\\
+
   \begin{figure}[!h]
       \centering
       \fbox{
-      %\includegraphics[width=8cm]{structure_fuse.eps.gz}
+      \includegraphics[width=8cm]{fig1/fig1.eps.gz}
       }
-      \caption{Intelligent Agent}
+      \caption{Intelligent Agent: Perception Action Cycle}
       \label{fig:Intelligent_Agent}
+  \end{figure}
+
+  The big question is the function which maps sensors to actuators. That is the control policy for
+  the agent. This whole class deals with how the agent makes decisions which it can carry out with
+  its actuators based on past sensor data.
+
+  These decisions take place many times in the loop of the environment feedback, this is called the
+  {\bf Perception Action Cycle}.\\
+
+\subsection{Mini Quiz}
+
+  AI has successfully been used in (choose one or more)\\
+
+  \begin{itemize}
+    \renewcommand{\labelitemi}{$\square$}
+    \item Finance
+    \item Robotics
+    \item Games
+    \item Medicine
+    \item The Web
+    \item None of them
+  \end{itemize}
+
+  \answer{All except the last}
+
+
+\subsection{AI in Finance}
+
+  \begin{figure}[!h]
+      \centering
+      \fbox{
+      \includegraphics[width=8cm]{fig2/fig2.eps.gz}
+      }
+      \caption{AI in Finance}
+      \label{fig:AI_in_Finance}
   \end{figure}
 
 
